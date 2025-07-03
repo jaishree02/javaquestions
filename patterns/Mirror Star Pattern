@@ -1,0 +1,43 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        // Your Code Here
+       Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        if (n % 2 != 0 && n < 10) {
+            int row = 1;
+            int nsp = n / 2;
+            int nst = 1;
+
+            while (row <= n) {
+                // Print spaces
+                for (int i = 0; i < nsp; i++) {
+                    System.out.print(" ");
+                }
+
+                // Print stars with single space between them
+                for (int i = 0; i < nst; i++) {
+                    System.out.print("*");
+                    if (i != nst - 1) {
+                        System.out.print(" ");
+                    }
+                }
+
+                System.out.println();
+
+                // Adjust counters
+                if (row <= n / 2) {
+                    nsp--;
+                    nst += 2;
+                } else {
+                    nsp++;
+                    nst -= 2;
+                }
+
+                row++;
+            }
+        }
+		
+    }
+}
