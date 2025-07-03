@@ -1,0 +1,32 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+         Scanner sc = new Scanner(System.in);
+
+	       
+	        int n= sc.nextInt();
+
+	        int[] arr = new int[n];
+
+	        
+	        for (int i = 0; i < n; i++) {
+	           
+	                arr[i] = sc.nextInt();
+	            }
+	
+	        int sort[]=sortarr(arr);
+	        for(int i=0;i<sort.length;i++) {
+				System.out.print(sort[i]+" ");
+
+	    }
+	}
+	public static int[] sortarr(int arr[]) {
+	        int sort[]=new int[arr.length];
+	        
+	        Arrays.sort(arr);
+	        return arr;  
+	}
+	
+}
+
+    
