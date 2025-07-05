@@ -1,0 +1,40 @@
+package String;
+
+import java.util.Scanner;
+
+public class CountPalindromicSubstring {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		String s=sc.next();
+		int count=0;
+		for(int i=0;i<s.length();i++) {
+			for(int j=i;j<s.length();j++)
+			{
+				String substring=s.substring(i,j+1);
+				if(isPalindrome(substring)) {
+					count++;
+					System.out.println(substring);
+				}
+				}
+			
+		}
+		System.out.println("total palindromic substring "+count);
+	}
+		public static boolean isPalindrome(String str) {
+			int i=0;
+			int j=str.length()-1;
+			while(i<j) {
+				if (str.charAt(i) != str.charAt(j)) {
+	                return false;
+	            }
+	            i++;
+	            j--;
+	        }
+	        return true;
+			}
+		
+	
+
+}
